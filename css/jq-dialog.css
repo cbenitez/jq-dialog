@@ -1,0 +1,99 @@
+/**
+ * JQ Dialog v1.20190216
+ * By Christian Benitez
+ * Git: https://github.com/cbenitez/jq-dialog
+ * Last modified: 2019-02-16
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.jq-dialog {
+    position        : fixed;
+    z-index         : 9999;
+    width           : 35rem;
+    min-height      : 8rem;
+    top             : calc(50% - 8rem);
+    left            : calc(50% - 35rem / 2);
+    background      : #ffffff;
+    border          : 1px solid rgba(0,0,0,.2);
+    border-radius   : .3rem;
+    font-family     : "Roboto", sans-serif;
+    font-style      : normal;
+    font-weight     : 400;
+    line-height     : 1.5;
+    text-align      : left;
+    text-shadow     : none;
+    text-transform  : none;
+    letter-spacing  : normal;
+    word-break      : normal;
+    word-spacing    : normal;
+    white-space     : normal;
+    font-size       : .875rem;
+    word-wrap       : break-word;
+    display         : none;
+}
+
+.jq-dialog-close {
+    vertical-align  : middle;
+    cursor          : pointer;
+    margin-top      : -1px;
+    padding-left    : 13px;
+    font-size       : 1.8em;
+    line-height     : 20px;
+    float           : right;
+}
+
+.jq-dialog-close:after {
+    content         : "\00d7";
+}
+
+.jq-dialog-header{
+    margin                  : 0;
+    padding                 : .5rem .75rem;
+    margin-bottom           : 0;
+    font-size               : 1rem;
+    background-color        : #f7f7f7;
+    border-bottom           : 1px solid #ebebeb;
+    border-top-left-radius  : calc(.3rem - 1px);
+    border-top-right-radius : calc(.3rem - 1px);
+}
+
+.jq-dialog-body{
+    padding         : .5rem .75rem;
+    color           : #212529;
+}
+
+.jq-dialog-overlay {
+  position          : fixed;
+  display           : block;
+  background-color  : #000;
+  opacity           : .6;
+  top               : 0;
+  bottom            : 0;
+  left              : 0;
+  right             : 0;
+  z-index           : 9998;
+}
+
+.accept-btn-func, .cancel-btn-func{
+    margin-right    : 10px;
+    float           :right;
+}
+
+@media (max-width: 720px) {
+    .jq-dialog{
+        width       : 35rem;
+        min-height  : 8rem;
+        top         : calc(50% - 8rem);
+        left        : calc(50% - 35rem / 2);
+    }
+}
+
+@media (max-width: 375px) {
+    .jq-dialog{
+        width       : 20rem;
+        min-height  : 4rem;
+        top         : calc(50% - 4rem);
+        left        : calc(50% - 20rem / 2);
+    }
+}
